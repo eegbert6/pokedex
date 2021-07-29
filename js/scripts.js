@@ -2,12 +2,12 @@
 let pokemonList = [
 	{
 		name: 'Bulbasaur',
-		height: .7,
+		height: 0.7,
 		type: [ 'poison', 'grass']
 	},
 	{
 		name: 'Squirtle',
-		height: .5,
+		height: 0.5,
 		type: [ 'water', 'defense']
 	},
 	{
@@ -17,6 +17,12 @@ let pokemonList = [
 	}
 ];
 
+// Loop to write pokemon's name and height
 for (let i=0; i < pokemonList.length; i++) {
-	document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") ");
+	// Conditional to highlight big pokemon
+	if (pokemonList[i].height > 1) {
+		document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, that's big! <br>");
+	} else {
+		document.write(pokemonList[i].name + " (height: " + pokemonList[i].height + ") <br> ");
+	}
 }
