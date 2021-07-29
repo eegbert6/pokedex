@@ -4,9 +4,13 @@ body {
 	font-size: 30px;                                       
 }
 
-.page-header {
+.container {
 	display: flex;
-	width: 100%;
+	flex-direction: column;
+}
+
+.page-header {
+	flex-direction: row;
 	padding: 30px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     font-family: 'Pokemon Solid', sans-serif;
@@ -22,6 +26,7 @@ body {
 }
 
 .pokemon-list {
+	flex-direction: row;
 	text-align: center;
 	margin-top: 50px;
 }
