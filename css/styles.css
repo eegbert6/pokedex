@@ -1,0 +1,27 @@
+body {
+	background-color: #ffc;
+	font-family: 'Ketchum', sans-serif;                               
+	font-size: 30px;                                       
+}
+
+.page-header {
+	display: flex;
+	width: 100%;
+	padding: 30px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    font-family: 'Pokemon Solid', sans-serif;
+}
+
+.page-header__item {
+	flex: 0 1 150px;
+}
+
+.page-header__title {
+	margin: 35px;
+	font-size: 85px;
+}
+
+.pokemon-list {
+	text-align: center;
+	margin-top: 50px;
+}
