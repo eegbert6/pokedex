@@ -11,22 +11,25 @@ body {
 
 .page-header {
 	flex-direction: row;
-	padding: 30px;
+	margin: 30px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     font-family: 'Pokemon Solid', sans-serif;
 }
 
 .page-header__item {
-	flex: 0 1 150px;
+	flex: 0 2 150px;
+}
+
+.pokeball {
+	float: left;
 }
 
 .page-header__title {
-	margin: 35px;
+	margin-left: 200px;
 	font-size: 85px;
 }
 
 .pokemon-list {
 	flex-direction: row;
 	text-align: center;
-	margin-top: 50px;
 }
