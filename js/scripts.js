@@ -1,5 +1,6 @@
 // List of Pokemons and their name, height, and types
-let pokemonList = [
+let pokemonRepository = (function () {
+	let pokemonList = [
 	{
 		name: 'Bulbasaur',
 		height: 0.7,
@@ -15,10 +16,24 @@ let pokemonList = [
 		height: 2.2,
 		type: [ 'dragon', 'flying']
 	}
-];
+	];
+
+	function getAll() {
+		return pokemonList;
+	}
+
+	function add(pokemon) {
+		pokemonList.push(pokemon);
+	}
+
+	return {
+		getAll: getAll,
+		add: add
+	};
+})();
+
 
 // forEach() loop to display pokemonList
-pokemonList.forEach( function (pokemon) {
 	if (pokemon.height > 1) {
 		document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') - Wow, that\'s big! </p>');
 	} else {
