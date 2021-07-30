@@ -17,12 +17,11 @@ let pokemonList = [
 	}
 ];
 
-// Loop to write pokemon's name and height
-for (let i=0; i < pokemonList.length; i++) {
-	// Conditional to highlight big pokemon
-	if (pokemonList[i].height > 1) {
-		document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") - Wow, that's big! </p>");
+// forEach() loop to display pokemonList
+pokemonList.forEach( function (pokemon) {
+	if (pokemon.height > 1) {
+		document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') - Wow, that\'s big! </p>');
 	} else {
-		document.write("<p>" + pokemonList[i].name + " (height: " + pokemonList[i].height + ") </p> ");
+		document.write( '<p>' + pokemon.name + ' (height: ' + pokemon.height + ') </p>');
 	}
-}
+});
