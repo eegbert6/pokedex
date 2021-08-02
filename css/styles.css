@@ -29,7 +29,15 @@ body {
 	font-size: 85px;
 }
 
-.pokemon-list {
-	flex-direction: row;
+
+
+/* buttons */
+
+.button-class {
+	border: 2px blue solid;
+	background-color: white;
+	padding: 16px 32px;
+	margin: 10px 15px;
 	text-align: center;
-}
+	text-decoration: none;
+	cursor: pointer;
