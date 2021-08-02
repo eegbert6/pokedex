@@ -1,6 +1,6 @@
 // List of Pokemons and their name, height, and types
 let pokemonRepository = (function () {
-	let pokemonList = [
+	let pokemon = [
 	{
 		name: 'Bulbasaur',
 		height: 0.7,
@@ -19,11 +19,11 @@ let pokemonRepository = (function () {
 	];
 
 	function getAll() {
-		return pokemonList;
+		return pokemon;
 	}
 
 	function add(pokemon) {
-		pokemonList.push(pokemon);
+		pokemon.push(pokemon);
 	}
 
 	return {
@@ -35,9 +35,15 @@ let pokemonRepository = (function () {
 
 // forEach() loop to display pokemonList
 pokemonRepository.getAll().forEach( function (pokemon) {
-	if (pokemon.height > 1) {
-		document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') - Wow, that\'s big! </p>');
-	} else {
-		document.write( '<p>' + pokemon.name + ' (height: ' + pokemon.height + ') </p>');
-	}
+	let pokemonList = document.querySelector('.pokemon-list');	
+	let listItem = document.createElement('li');
+	let button = document.createElement('button')
+
+	button.innerText = 'placeholder';
+
+	button.classList.add('button-class');
+
+	listItem.appendChild(button);
+
+	pokemonList.appendChild(listItem);
 });
