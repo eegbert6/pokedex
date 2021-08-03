@@ -33,6 +33,7 @@ let pokemonRepository = (function () {
 		console.log(pokemon);
 	}
 
+	//The following function fetches data from the API and adds it to the list using the add function
 	function loadList() {
 		return fetch(apiUrl).then(function (response) {
 			return response.json();
@@ -49,11 +50,26 @@ let pokemonRepository = (function () {
 		})
 	}
 
+	//The following function will load details about individual pokemon
+	function loadDetails(item) {
+		let url = item.detailsUrl;
+		return fetch(url).then(function (response) {
+			return response.json();
+		}).then(function (details) {
+			item.imageUrl = details.sprites.front_default;
+			item.height = details.height;
+			item.types = details.types;
+		}).catch(function (e) {
+			console.error(e);
+		});
+	}
+
 	return {
 		getAll: getAll,
 		add: add,
 		addListItem: addListItem,
-		loadList: loadList
+		loadList: loadList,
+		loadDetails: loadDetails
 	};
 })();
 
