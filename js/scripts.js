@@ -22,10 +22,12 @@ let pokemonRepository = (function () {
 		return pokemon;
 	}
 
+	// The following function adds new pokemon arrays to the list of pokemon
 	function add(pokemon) {
 		pokemon.push(pokemon);
 	}
 
+	// The following function creates buttons for each pokemon in the repository
 	function addListItem(pokemon) {
 		let pokemonList = document.querySelector('.pokemon-list');	
 		let listItem = document.createElement('li');
@@ -38,6 +40,12 @@ let pokemonRepository = (function () {
 		listItem.appendChild(button);
 
 		pokemonList.appendChild(listItem);
+
+		button.addEventListener ('click', showDetails);
+	}
+
+	function showDetails(pokemon) {
+		console.log(pokemon);
 	}
 
 	return {
