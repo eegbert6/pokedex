@@ -96,11 +96,12 @@ function showModal(title, text) {
 
 	// Add new model content
 	let closeButtonElement = document.createElement('button');
-	closeButtonElement.innerText = 'Close';
+	closeButtonElement.classList.add('modal-close')
+	closeButtonElement.innerText = 'X';
 	closeButtonElement.addEventListener('click', hideModal);
 
 	let pokemonTitle = document.createElement('h1');
-	pokemonTitle.innerText = pokemonTitle
+	pokemonTitle.innerText = title;
 
 	let pokemonDetails = document.createElement('p');
 	pokemonDetails.innerText = text;
