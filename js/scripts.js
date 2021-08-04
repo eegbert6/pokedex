@@ -83,3 +83,36 @@ pokemonRepository.loadList().then(function() {
 		pokemonRepository.addListItem(pokemon);
 	});
 });
+
+// Modal for pokemon details
+let modalContainer = document.querySelector('#modal-container');
+
+function showModal(title, text) {
+	// Clears all existing modal content
+	modalContainer.innerHTML = '';
+
+	let modal = document.createElement('div');
+	modal.classList.add('modal');
+
+	// Add new model content
+	let closeButtonElement = document.createElement('button');
+	closeButtonElement.innerText = 'Close';
+	closeButtonElement.addEventListener('click', hideModal);
+
+	let pokemonTitle = document.createElement('h1');
+	pokemonTitle.innerText = pokemonTitle
+
+	let pokemonDetails = document.createElement('p');
+	pokemonDetails.innerText = text;
+
+	modal.appendChild(closeButtonElement);
+	modal.appendChild(pokemonTitle);
+	modal.appendChild(pokemonDetails);
+	modalContainer.appendChild(modal);
+
+	modalContainer.classList.add('is-visible');
+};
+
+function hideModal(){
+	modalContainer.classList.remove('is-visible');
+};
