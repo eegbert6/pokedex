@@ -117,3 +117,18 @@ function showModal(title, text) {
 function hideModal(){
 	modalContainer.classList.remove('is-visible');
 };
+
+// Close module with escape key
+window.addEventListener('keydown', (e) => {
+	if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+		hideModal();
+	}
+});
+
+// Close module with click outside
+modalContainer.addEventListener('click', (e) => {
+	let target = e.target;
+	if (target === modalContainer) {
+		hideModal();
+	}
+});
