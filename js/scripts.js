@@ -21,6 +21,9 @@ let pokemonRepository = (function () {
 		button.innerText = pokemon.name;
 
 		button.classList.add('button-class');
+		$('button').addClass('btn').addClass('btn-success').addClass('btn-lg');
+
+		listItem.classList.add('group-list-item');
 
 		listItem.appendChild(button);
 

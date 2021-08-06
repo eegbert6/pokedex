@@ -37,27 +37,13 @@ li {
 /* buttons */
 
 .button-class {
-	border: none;
-	background-color: #665bf7;
-	color: white;
-	border-radius: 5px;
-	display: inline-block;
-	justify-content: center;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 	padding: 16px 32px;
 	margin: 10px 15px;
-	text-align: center;
-	text-decoration: none;
-	cursor: pointer;
 }
 
-.button-class:active,
-.button-class:hover {
-	opacity: 0.8 ;
-}
 
-/* modal */
-#modal-container {
+/* modal 
+/*#modal-container {
 	display: none;
 }
 
@@ -72,17 +58,17 @@ li {
 	background: rgba(255, 255, 204, 0.7);
 
 	 to show it above other content 
-	z-index: 999;
+	z-index: 999;*/
 
 	/* to allow scrolling if the screen is not high enough*/ 
-	overflow: auto;
+	/*overflow: auto;*/
 
 	/*this is used to center the modal */
-	display: grid;
+	/*display: grid;
 	text-align: center;
-}
+}*/
 
-.modal {
+/*.modal {
 	margin: auto;
 	display: inline-block;
 	box-sizing: border-box;
@@ -111,4 +97,4 @@ li {
 .modal img {
 	width: 25%;
 	height: auto;
-}
+}**/
