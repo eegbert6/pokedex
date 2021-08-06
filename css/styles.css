@@ -42,7 +42,7 @@ li {
 }
 
 
-/* modal 
+ /*modal */
 /*#modal-container {
 	display: none;
 }
@@ -58,15 +58,15 @@ li {
 	background: rgba(255, 255, 204, 0.7);
 
 	 to show it above other content 
-	z-index: 999;*/
+	z-index: 999;
+/*
+	 to allow scrolling if the screen is not high enough */
+	overflow: auto;
 
-	/* to allow scrolling if the screen is not high enough*/ 
-	/*overflow: auto;*/
-
-	/*this is used to center the modal */
-	/*display: grid;
-	text-align: center;
-}*/
+/*	this is used to center the modal */
+	display: grid;
+	/*text-align: center;
+}*/*/
 
 /*.modal {
 	margin: auto;
@@ -97,4 +97,4 @@ li {
 .modal img {
 	width: 25%;
 	height: auto;
-}**/
+}*/
