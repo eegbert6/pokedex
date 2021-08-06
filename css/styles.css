@@ -4,12 +4,28 @@ body {
 	font-size: 30px;                                       
 }
 
+.navbar {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+	display: inline-block;
+	float: none;
+	text-align: left;
+}
+
+.navbar-brand {
+	font-family: 'Pokemon Solid', sans-serif;
+	font-size: 2em;
+}
+
+#pokeball {
+	width: 2em;
+}
+
 .container {
 	display: flex;
 	flex-direction: column;
 }
 
-.page-header {
+/*.page-header {
 	flex-direction: row;
 	margin: 2%;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
@@ -27,7 +43,7 @@ body {
 .page-header__title {
 	margin-left: 2em;
 	font-size: 85px;
-}
+}*/
 
 li {
 	text-align: center;
@@ -43,8 +59,4 @@ li {
 
 .modal-content {
 	text-align: center;
-}
-
-.modal-title {
-	font-size: 100px;
 }
