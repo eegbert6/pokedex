@@ -86,11 +86,11 @@ let pokemonRepository = (function () {
 	    let pokemonTitle = document.createElement('h1');
 			pokemonTitle.innerText = title;
 
-			let pokemonHeight = document.createElement('p');
-			pokemonHeight.innerText = 'Height: ' + text;
+		let pokemonHeight = document.createElement('p');
+		pokemonHeight.innerText = 'Height: ' + text;
 
-			let pokemonImg = document.createElement('img');
-			pokemonImg.src = picture;
+		let pokemonImg = document.createElement('img');
+		pokemonImg.src = picture;
 
 	    modalTitle.appendChild(pokemonTitle);
 	    modalBody.appendChild(pokemonHeight);
