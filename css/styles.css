@@ -25,26 +25,6 @@ body {
 	flex-direction: column;
 }
 
-/*.page-header {
-	flex-direction: row;
-	margin: 2%;
-	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    font-family: 'Pokemon Solid', sans-serif;
-}
-
-.page-header__item {
-	flex: 0 2 150px;
-}
-
-.pokeball {
-	float: left;
-}
-
-.page-header__title {
-	margin-left: 2em;
-	font-size: 85px;
-}*/
-
 li {
 	text-align: center;
 	list-style-type: none;
