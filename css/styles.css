@@ -1,7 +1,9 @@
+/* stylelint-disable indentation */
+
 body {
 	background-color: #ffc;
-	font-family: 'Ketchum', sans-serif;                               
-	font-size: 30px;                                       
+	font-family: 'Ketchum', sans-serif;
+	font-size: 30px;
 }
 
 .navbar {
