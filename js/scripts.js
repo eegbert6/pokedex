@@ -29,7 +29,7 @@ let pokemonRepository = (function () {
 
 		pokemonList.appendChild(listItem);
 
-		button.addEventListener ('click', function(event) {
+		button.addEventListener ('click', function() {
 			showDetails(pokemon);
 		});
 	}
@@ -59,31 +59,29 @@ let pokemonRepository = (function () {
 
 	//The following function will load details about individual pokemon
 	function loadDetails(item) {
-	    let url = item.detailsUrl;
-	    return fetch(url).then(function (response) {
-	      return response.json();
-	    }).then(function (details) {
-	      item.imageUrl = details.sprites.front_default;
-	      item.height = details.height;
-	      item.types = details.types;
-	    }).catch(function (e) {
-	      console.error(e);
-	    });
-	  }
+		let url = item.detailsUrl;
+		return fetch(url).then(function (response) {
+			return response.json();
+		}).then(function (details) {
+			item.imageUrl = details.sprites.front_default;
+			item.height = details.height;
+			item.types = details.types;
+		}).catch(function (e) {
+			console.error(e);
+		});
+	}
 
 	// Modal for pokemon details
-	let modalContainer = document.querySelector('#modal-container');
-
+	
 	function showModal(title, text, picture) {
 
 		let modalBody = document.querySelector('.modal-body');
-	    let modalTitle = document.querySelector('.modal-title');
-	    let modalHeader = document.querySelector('.modal-header');
+		let modalTitle = document.querySelector('.modal-title');
 
-	    modalBody.innerHTML = '';
-	    modalTitle.innerHTML = '';
+		modalBody.innerHTML = '';
+		modalTitle.innerHTML = '';
 
-	    let pokemonTitle = document.createElement('h1');
+		let pokemonTitle = document.createElement('h1');
 			pokemonTitle.innerText = title;
 
 		let pokemonHeight = document.createElement('p');
@@ -92,10 +90,10 @@ let pokemonRepository = (function () {
 		let pokemonImg = document.createElement('img');
 		pokemonImg.src = picture;
 
-	    modalTitle.appendChild(pokemonTitle);
-	    modalBody.appendChild(pokemonHeight);
-	    modalBody.appendChild(pokemonImg);
-	};
+		modalTitle.appendChild(pokemonTitle);
+		modalBody.appendChild(pokemonHeight);
+		modalBody.appendChild(pokemonImg);
+	}
 
 	return {
 		getAll: getAll,
