@@ -21,8 +21,12 @@ let pokemonRepository = (function () {
 		button.innerText = pokemon.name;
 
 		button.classList.add('button-class');
-		$('button').addClass('btn').addClass('btn-success').addClass('btn-lg').attr('data-target', '#pokemonModal').attr('data-toggle', 'modal');
-
+		button.classList.add('btn');
+		button.classList.add('btn-success');
+		button.classList.add('btn-lg')
+		button.setAttribute('data-target', "#pokemonModal");
+		button.setAttribute('data-toggle', 'modal');
+		
 		listItem.classList.add('group-list-item');
 
 		listItem.appendChild(button);
